@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ebebeb;
+}
+
+header {
+    background-color: #EAC926;
+    font-size: 12px;
+}
+
+.busqueda {
+    width: 50%;
+    display: inline-block;
+}
+
+.logo {
+    width: 50%;
+}
+
+.doslistas {
+
+    font-size: 12px;
+    display: none;
+}
+
+
+
+img {
+    width: 100%;
+}
+
+main {
+    font-size: 24px;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+footer {
+    text-align: center;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.titulosmain {
+    font-size: 24px;
+    margin: 30px;
+}
+
+.precio {
+    font-size: 18px;
+}
+
+.descuento {
+    font-size: 16px;
+    color: #39b54a;
+}
+
+.descripcion {
+    display: none;
+    font-size: 16px;
+}
+
+.burger-menu {
+    text-align: center;
+}
+
+.burger-menu i {
+    background-color: blue;
+    border-radius: 15%;
+    color: white;
+    padding: 3%;
+    margin-bottom: 15px;
+}
+
+.ultimavisita .articulo .articulos i {
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    color: #39b54a;
+    position: absolute;
+    right: 20px;
+    /* top:-15px */
+    
+}
+
+.ultimavisita .articulo .articulos i{
+    transition: transform 1s;
+}
+
+.ultimavisita .articulo .articulos:hover i{
+    transform: rotate(-90deg);
+}
+
+.articulos {
+    margin: 10px;
+    border-top: solid 1px #ebebeb;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.precio .descuento{
+    width: 50%;
+}
+
+.titulosfooter {
+    margin-bottom: 10px;
+}
+
+.parrafosfooter {
+    margin-bottom: 10px;
+}
+
+.beneficiosfooter {
+    margin: 30px;
+}
+
+.perfil_usuario{
+    display: flex;
+}
+
+@media (min-width: 361px) {
+    .doslistas {
+        display: block;
+        padding: 10px;
+    }
+
+
+    .descripcion {
+        display: block;
+    }
+
+    .articulo {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    .productos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .articulo {
+        width: 45%;
+    }
+
+    
+}
+
+.login button[type='submit']:hover,
+.register button[type='submit']:hover{
+    background-color: #0022AA;
+}
+
+@media (min-width: 768px) {
+    .articulo {
+        width: 22%;
+    }
+
+    .encabezado {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    .burger-menu i {
+        display: none;
+    }
+
+    .doslistas {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px;
+    }
+
+    .doslistas ul {
+        display: flex;
+    }
+
+    .doslistas li {
+        margin: 0px 5px;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    .encabezado,
+    .doslistas {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .doslistas li {
+        margin: 0px 10px;
+    }
+}
