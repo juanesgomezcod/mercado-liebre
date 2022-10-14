@@ -12,121 +12,110 @@
 </head>
 
 <body>
-    <header>
+    <header class="encabezado-ppal">
         <div class="encabezado">
             <div>
                 <img class="logo" src="/images/logo-mercado-liebre.svg" alt="logo de mercadolibre">
             </div>
             <div class="barrabusqueda">
-                <input class="busqueda" type="search" , placeholder="Buscar productos, Marcas">
-                <button class="fas fa-search"></button>
+                <form action="/search" method="GET" class="search-form">
+                    <input type="text" name="keywords" placeholder="Buscar productos, marcas y más"
+                        class="search-form_input">
+                    <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+                </form>
             </div>
-
+    
             <div>
-                <i class="fas fa-hand-holding-usd"></i>
-                Compra en cuotas sin t de credito
+                <a href="#" class="tarjeta de credito">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    Compra en cuotas sin t de credito
+                </a>
             </div>
+    
+            <button class="burger-menu">
+                <i class="fas fa-bars"></i>
+            </button>
+    
+    
+            <nav class="doslistas">
+                <ul class="primeralista">
+                    <li> <a href="#">Ofertas</a> </li>
+                    <li> <a href="#">Tiendas Oficiales</a></li>
+                    <li> <a href="/products/create">Vender</a></li>
+                    <li> <a href="#">Ayuda</a></li>
+                </ul>
+    
+                <ul class="segundalista">
+                    <li> <a href="./register">Crea tu cuenta<i class="far fa-id-card"></i></a></li>
+                    <li> <a href="./login">Ingresa<i class="fas fa-sign-in-alt"></i></a></li>
+                    <li> <a href="#">Mis compras<i class="fas fa-shopping-basket"></i></a></li>
+                </ul>
+            </nav>
+    
+    
         </div>
-
-        <nav class="doslistas">
-            <ul class="primeralista">
-                <li> <a href="#">Ofertas</a> </li>
-                <li> <a href="#">Tiendas Oficiales</a></li>
-                <li> <a href="#">Vender</a></li>
-                <li> <a href="#">Ayuda</a></li>
-            </ul>
-
-            <ul class="segundalista">
-                <li> <a href="/register">Crea tu cuenta<i class="far fa-id-card"></i></a></li>
-                <li> <a href="/login">Ingresa<i class="fas fa-sign-in-alt"></i></a></li>
-                <li> <a href="#">Mis compras<i class="fas fa-shopping-basket"></i></a></li>
-            </ul>
-        </nav>
-
-        <div class="burger-menu">
-            <i class="fas fa-bars"></i>
-        </div>
-
     </header>
 
 
-    <main>
+    <main class="registrate">
         <form action="/" method="get" class="registro">
-            <div class="formreg">
+            
                 <input type="text" minlength="3" name="nombre" placeholder="Nombre y Apellido" class="input">
                 <input type="text" minlength="3" name="nombre-usuario" placeholder="Nombre de usuari@" class="input">
                 <input type="email" name="email" placeholder="email" class="input">
-                <input type="password" required name="password" class="password" placeholder="password">
-                <input type="password" required name="passwordconfirm" class="password" placeholder="confirm password">
-            </div>
-            <div class="formreg">
-                <label for="fechaDeNacimiento">Fecha De Nacimiento</label>
+                <br>
+                <br>
+                <label for="fechaDeNacimiento"><b> Fecha De Nacimiento</b></label>
                 <br>
                 <input type="date" name="fechaDenacimiento" class="input" id="fechaDeNacimiento">
                 <br>
                 <input type="text" name="domicilio" placeholder="Domicilio" class="input">
-            </div>
-            <div class="formreg">
                 <br>
                 <br>
-
-                <p>Perfil de Usuario</p>
+                <h4>Perfil de Usuario</h4>
                 <div class="perfil-usuario">
-                    <div class="comprador">
-                <label for="Comprador">
                     <input type="radio" name="perfil" value="comprador" class="radio" id="Comprador">
-                    Comprador</label>
-                </div>
-                <div class="vendedor">
-                <label for="Vendedor">
+                    <label for="Comprador">Comprador</label>
                     <input type="radio" name="perfil" value="vendedor" class="radio" id="Vendedor">
-                    Vendedor</label>
+                    <label for="Vendedor">Vendedor</label>               
                 </div>
-                </div>
-            </div>
-            <br>
-            <br>
-            <div class="formreg">
-                <p>Categoria de Interes</p>
+                <br>
+                <br>
+                <h4>Categoria de Interes</h4>
                 <div class="intereses">
                     <div>
-                        <label for="Electro">
-                            <input type="checkbox" name="Intereses" value="Electro" class="categorias" id="Electro">
-                            Electro</label>
+                        <input type="checkbox" name="Intereses" value="Electro" class="categorias" id="Electro">
+                        <label for="Electro">Electro</label>
                     </div>
                     <div>
-                        <label for="Moda">
-                            <input type="checkbox" name="Intereses" value="Moda" class="categorias" id="Moda">
-                            Moda</label>
+                        <input type="checkbox" name="Intereses" value="Moda" class="categorias" id="Moda">
+                        <label for="Moda">Moda</label>
                     </div>
                     <div>
-                        <label for="Hogar">
-                            <input type="checkbox" name="Intereses" value="Hogar" class="categorias" id="Hogar">
-                            Hogar</label>
+                        <input type="checkbox" name="Intereses" value="Hogar" class="categorias" id="Hogar">
+                        <label for="Hogar">Hogar</label>
                     </div>
                     <div>
-                        <label for="Jugueteria">
-                            <input type="checkbox" name="Intereses" value="Jugueteria" class="categorias"
-                                id="Jugueteria">
-                            Jugueteria</label>
+                        <input type="checkbox" name="Intereses" value="Jugueteria" class="categorias" id="Jugueteria">
+                        <label for="Jugueteria">Jugueteria</label>
                     </div>
                     <div>
-                        <label for="Vida Sana">
-                            <input type="checkbox" name="Intereses" value="Vida Sana" class="categorias" id="Vida Sana">
-                            Vida Sana</label>
+                        <input type="checkbox" name="Intereses" value="Vida Sana" class="categorias" id="Vida Sana">
+                        <label for="Vida Sana">Vida Sana</label>
                     </div>
                 </div>
-            </div>
             <br>
             <br>
             <h4>Elije tu foto de usuario</h4>
-            
-                <input type="file" accept=".jpg,.png" name="Avatar" class="Usuario" id="Avatar">
+            <input type="file" accept=".jpg,.png" name="Avatar" class="Usuario" id="Avatar">
             <br>
             <br>
-            
-                <button type="submit">Enviar</button>
-                <button type="reset">Borrar</button>
+            <input type="password" required name="password" class="password" placeholder="password">
+            <input type="password" required name="passwordconfirm" class="password" placeholder="confirm password">
+            <br>
+            <br>
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar</button>
             <br>
             <br>
         </form>

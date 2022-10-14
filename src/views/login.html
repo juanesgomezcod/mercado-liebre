@@ -11,43 +11,55 @@
 
 </head>
 
-<body>
-    <header>
-        <div class="encabezado">
-            <div>
-                <img class="logo" src="/images/logo-mercado-liebre.svg" alt="logo de mercadolibre">
-            </div>
-            <div class="barrabusqueda">
-                <input class="busqueda" type="search" , placeholder="Buscar productos, Marcas">
-                <button class="fas fa-search"></button>
-            </div>
+<header class="encabezado-ppal">
+    <div class="encabezado">
+        <div>
+            <img class="logo" src="/images/logo-mercado-liebre.svg" alt="logo de mercadolibre">
+        </div>
+        <div class="barrabusqueda">
+            <form action="/search" method="GET" class="search-form">
+                <input type="text" name="keywords" placeholder="Buscar productos, marcas y más"
+                    class="search-form_input">
+                <button type="submit" class="search-form_button"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
 
-            <div>
+        <div>
+            <a href="#" class="tarjeta de credito">
                 <i class="fas fa-hand-holding-usd"></i>
                 Compra en cuotas sin t de credito
-            </div>
+            </a>
         </div>
+
+        <button class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </button>
+
 
         <nav class="doslistas">
             <ul class="primeralista">
                 <li> <a href="#">Ofertas</a> </li>
                 <li> <a href="#">Tiendas Oficiales</a></li>
-                <li> <a href="#">Vender</a></li>
+                <li> <a href="/products/create">Vender</a></li>
                 <li> <a href="#">Ayuda</a></li>
             </ul>
 
             <ul class="segundalista">
-                <li> <a href="/register">Crea tu cuenta<i class="far fa-id-card"></i></a></li>
-                <li> <a href="/login">Ingresa<i class="fas fa-sign-in-alt"></i></a></li>
+                <li> <a href="./register">Crea tu cuenta<i class="far fa-id-card"></i></a></li>
+                <li> <a href="./login">Ingresa<i class="fas fa-sign-in-alt"></i></a></li>
                 <li> <a href="#">Mis compras<i class="fas fa-shopping-basket"></i></a></li>
             </ul>
         </nav>
 
-        <div class="burger-menu">
-            <i class="fas fa-bars"></i>
-        </div>
 
-    </header>
+    </div>
+</header>
+
+<body>
+    <br>
+    <br>
+    <br>
+    <br>
 
 
     <main>
@@ -57,6 +69,8 @@
             <button type="submit">Ingresar</button>
         </form>
     </main>
+    <br>
+    <br>
 
     <footer>
         <div class="beneficiosfooter">
